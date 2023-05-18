@@ -1,1 +1,65 @@
 /* todo list css */
+/* ### ALL CONTENT ### */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+body{
+    width: 100%;
+    height: 100vh; /*gözün gördüğü alanı tarif eder*/
+    background:linear-gradient(155deg, #5D1F18, #ef5f4f);
+}
+/* ### TODO ### */
+.todo_container{
+margin: 10rem auto;
+padding: 1rem;
+background-color: rgba(15,0,0,0.8);
+border-radius: 1rem;
+box-shadow:0 0.8rem 2rem rgba(15,0,0,0.6) ;
+color: rgba(255,255,255,0.8);
+}
+/* icon ile input yönetimi */
+.todo_input{
+   
+    position: relative;
+    height: 7rem;
+    padding: 0 6rem;
+}
+#icon_id{
+    position: absolute;
+    top: 3rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: rgb(112, 111, 111);
+    transform: translate(1rem -55%);
+}
+/* input_id */
+#input_id{
+    width: 100%;
+    height: 120%;
+    padding:0 3rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    box-shadow: 1px 1px 4px 1px rgba(102,100,128,0.8);
+}
+/* input_id:focus */
+#input_id:focus{
+    background-color: rgb(122, 139, 237);
+    color: rgb(6, 5, 5);
+}
+#input_id::placeholder{
+    color: rgba(0,0,0,1);
+}
+/* todo_attributes */
+.todo_attributes{
+    width: 100%;
+    color: #ffc107;
+    text-transform: uppercase;
+    border:1px solid red;
+    padding: 1 rem auto;
+    text-align: center;
+}
