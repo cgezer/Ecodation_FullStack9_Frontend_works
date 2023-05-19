@@ -31,39 +31,32 @@
             <div class="todo_container">
                 <!-- icon ile input uygun yerde yazılmalı -->
                 <div class="todo_input">
-                    <form action="#!" method="get" autocomplete="on"></form>
+                    <form action="#!" method="get" autocomplete="on">
                     <div class="row">
                         <p class="text-primary text-center text-capitalize">Yapmak istediğinizi yazınız</p>
                         <div class="col-11 col-md-6 col-sm-6">
-                            <i name="icon_position" id="icon_id" class="fa-solid fa-pen-to-square"></i>
-                            <input type="text" id="input_id" class="form-control"
-                                placeholder="Yapmak istediğiniz yazınız ve entere tıklayınız." />
+                            <i name="icon_position" class="fa-solid fa-pen-to-square" id="icon_id"></i>
+                            <input type="text" id="input_id" class="form-control" placeholder="Yapmak istediğiniz yazınız ve entere tıklayınız."/>
                         </div>
-                        <div class="col-3">
+                        <div class="col-1">
                             <button type="reset" class="btn btn-danger">Cleaner</button>
                         </div>
                     </div>
                     </form>
                 </div>
                 <div class="todo_all">
-                    <div class="row">
-                        <div class="col-10">
-                            <div class="todo_attributes">
-                                <span class="active" id="all">Hepsi</span>
-                                <span id="will_make">Yapılacaklar</span>
-                                <span id="complated">Tamamlanan</span>
-                            </div><!--end todo_attributes-->
-                        </div>
-                        <div class="col-1">
-                            <button class="todo_clean btn btn-warning">Temizle</button>
-                        </div>
-                    </div>               
-                <hr>
-            </div><!--end todo_all-->
-            <p class="text-center text-uppercase text-primary raunded border border-primary mt-4">listeler</p>
-            <ul class="ul_todo"></ul>
-        </div><!-- end todo_container -->
-    </div><!-- end row -->
+                    <div class="todo_attributes">
+                        <span class="active btn btn-primary shadow" id="all">Hepsi</span>
+                        <span class="btn btn-primary shadow" id="will_make">Yapılacaklar</span>
+                        <span class="btn btn-info shadow" id="complated btn btn-info shadow">Tamamlanan</span>
+                        <button class="todo_clean btn btn-warning">Temizle</button>
+                    </div><!--end todo_attributes-->
+                    <hr>
+                </div><!--end todo_all-->
+                <p class="text-center text-uppercase text-primary raunded border border-primary mt-4">listeler</p>
+                <ul class="ul_todo"></ul>
+            </div><!-- end todo_container -->
+        </div><!-- end row -->
     </div> <!-- end container-->
     <!-- end codes -->
 

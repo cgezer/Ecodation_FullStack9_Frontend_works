@@ -40,3 +40,17 @@ let example=Number(prompt("lütfen bir sayı giriniz."));
 console.log("example:"+example);
 let numberSqr=Number(prompt("Hangi sayının kare kökünü öğrenmek istiyorsunuz..."));
 alert(numberSqr+"'un karekökü="+Math.sqrt(numberSqr));
+console.log("3/3="+3/3);
+console.log("0/3="+0/3);
+console.log("3/0="+3/0);
+//Math(Mutlak Değer)
+console.log(Math.min(12,90,23,54,9,-21));
+console.log(Math.max(12,90,23,54,9,-21));
+console.log(Math.ceil(8.2));
+console.log(Math.floor(8.2));
+console.log(Math.round(6.4));
+console.log(Math.round(6.5));
+console.log(Math.abs(-12));
+console.log(Math.sqrt(Math.abs(-25)));
+console.log(Math.pow(3,Math.sqrt(Math.abs(-25))));
+console.log(Maht.floor(Math.random()*9+1));//1<=x<=9

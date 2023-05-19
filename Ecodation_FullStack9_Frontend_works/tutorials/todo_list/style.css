@@ -23,8 +23,7 @@ box-shadow:0 0.8rem 2rem rgba(15,0,0,0.6) ;
 color: rgba(255,255,255,0.8);
 }
 /* icon ile input yönetimi */
-.todo_input{
-   
+.todo_input{   
     position: relative;
     height: 7rem;
     padding: 0 6rem;
@@ -36,6 +35,9 @@ color: rgba(255,255,255,0.8);
     font-size: 1.5rem;
     color: rgb(112, 111, 111);
     transform: translate(1rem -55%);
+}
+#icon_id:focus-{
+
 }
 /* input_id */
 #input_id{
@@ -51,6 +53,7 @@ color: rgba(255,255,255,0.8);
     background-color: rgb(122, 139, 237);
     color: rgb(6, 5, 5);
 }
+
 #input_id::placeholder{
     color: rgba(0,0,0,1);
 }
@@ -59,7 +62,6 @@ color: rgba(255,255,255,0.8);
     width: 100%;
     color: #ffc107;
     text-transform: uppercase;
-    border:1px solid red;
     padding: 1 rem auto;
     text-align: center;
 }
