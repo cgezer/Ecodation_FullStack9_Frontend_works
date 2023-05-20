@@ -86,29 +86,98 @@
 // console.log(binary16);
  /////////////////////////////////////////////////////////////
  //string
- let vocabulary="lesson about works of JS ";
- console.log(vocabulary);
- console.log(typeof vocabulary);
- console.log(typeof String(25)); //cast process
- console.log(vocabulary.length);
- // trim using: "trim" use to cuts spaces of start or end of text
- console.log(vocabulary.trim());
- console.log(vocabulary.trim().length);
- console.log(vocabulary.toLocaleUpperCase());
- console.log(vocabulary.toLocaleLowerCase());
- console.log(vocabulary.charAt(4));
- console.log(vocabulary.indexOf("of"));
- console.log(vocabulary.lastIndexOf("of"));
- console.log(vocabulary.substring(4));
- console.log(vocabulary.substring(4).toLocaleUpperCase());
- console.log(vocabulary.substring(4,9));
- console.log(vocabulary.concat(" sona eklenen"));// concat, given text end of text
- console.log(vocabulary.startsWith("JS"));
- console.log(vocabulary.endsWith("JS "));
- let alinanCumle=String(prompt("bir cümle giriniz"));
- console.log("cumle:"+alinanCumle);
- let ilkbosluk=Number(alinanCumle.indexOf(" "));
- console.log("ilk boşluk:"+ilkbosluk);
-console.log(alinanCumle.replace(alinanCumle.substring(0,alinanCumle.indexOf(" ")),"Javascript"));
+//  let vocabulary="lesson about works of JS ";
+//  console.log(vocabulary);
+//  console.log(typeof vocabulary);
+//  console.log(typeof String(25)); //cast process
+//  console.log(vocabulary.length);
+//  // trim using: "trim" use to cuts spaces of start or end of text
+//  console.log(vocabulary.trim());
+//  console.log(vocabulary.trim().length);
+//  console.log(vocabulary.toLocaleUpperCase());
+//  console.log(vocabulary.toLocaleLowerCase());
+//  console.log(vocabulary.charAt(4));
+//  console.log(vocabulary.indexOf("of"));
+//  console.log(vocabulary.lastIndexOf("of"));
+//  console.log(vocabulary.substring(4));
+//  console.log(vocabulary.substring(4).toLocaleUpperCase());
+//  console.log(vocabulary.substring(4,9));
+//  console.log(vocabulary.concat(" sona eklenen"));// concat, given text end of text
+//  console.log(vocabulary.startsWith("JS"));
+//  console.log(vocabulary.endsWith("JS "));
+//  let alinanCumle=String(prompt("bir cümle giriniz"));
+//  console.log("cumle:"+alinanCumle);
+//  let ilkbosluk=Number(alinanCumle.indexOf(" "));
+//  console.log("ilk boşluk:"+ilkbosluk);
+// console.log(alinanCumle.replace(alinanCumle.substring(0,alinanCumle.indexOf(" ")),"Javascript"));
+///////////////////////////////////////////////////////////////////////////////////////////////
+// NORMAL FUNCTİON
+function returnsuzParametresizFonksiyon(){
+console.log("returnsuz parametresiz fonksiyon");
+}
+returnsuzParametresizFonksiyon();
+function returnsuzParametreliFonksiyon(id){
+console.log("id:"+id);
+}
+returnsuzParametreliFonksiyon(25);
+function returnluParametresizFonksiyon(){
+    return "returnlu parametresiz fonksiyon";
+}
+let geleneBilgi=returnluParametresizFonksiyon();
+console.log(geleneBilgi);
+function returnluParametreliFonksiyon (id,name){
+return ("id:"+(id*100)+" "+String(name).substring(0,2).concat("***")+"Gezer".substring(0,2).concat("***"));
+}
+console.log(returnluParametreliFonksiyon(25,"Celal"));
+ // ANONYMOUS FUNCTION
+ let anonymousFunction= function() {
+    console.log("anonymous functions");
+ } 
+ anonymousFunction();
+ // Arrow Function
+ let arrowFunction=(name)=>{
+    console.log("arrow function"+String(name).substring(0,2));
+ }
+ arrowFunction("Celal");
+ // Arrow Function With Return
+ let arrowFunctionWithReturn=(name)=>{
+    return "arrow function with return "+String(name).substring(0,2).concat("***");
+ }
+ //ternary(if kısayol)
+ let arrowRetur=arrowFunctionWithReturn("CelalGezer");
+ console.log(arrowRetur);
+ let yas=16;
+ let result=(yas>=18)?"Karar alabilir":"Karar alamaz";
+ console.log(result);
+//  if,else
+if(yas==14){
+    console.log("yas 14");
+}else if(yas==15){
+    console.log("yas 15");
+}
+else if(yas===16){// === hem değer hem tip karşılaştırması yapar.
+console.log("yas 16");
+}
+else if(yas===18){
+    console.log("yas 18");
+}
+//switch case yapısı
 
+switch (yas) {
+    case 15:
+        console.log("yaş 15");
+        break;
+    case 16:
+            console.log("yaş 16");
+            break;
+    case 17:
+        console.log("yaş 17");
+        break;
 
+    case 18:
+            console.log("yaş 18");
+            break;
+    default:
+        console.log("yaş dışında");
+        break;
+}
