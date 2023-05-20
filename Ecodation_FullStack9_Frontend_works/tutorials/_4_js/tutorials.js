@@ -112,72 +112,107 @@
 // console.log(alinanCumle.replace(alinanCumle.substring(0,alinanCumle.indexOf(" ")),"Javascript"));
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // NORMAL FUNCTİON
-function returnsuzParametresizFonksiyon(){
-console.log("returnsuz parametresiz fonksiyon");
-}
-returnsuzParametresizFonksiyon();
-function returnsuzParametreliFonksiyon(id){
-console.log("id:"+id);
-}
-returnsuzParametreliFonksiyon(25);
-function returnluParametresizFonksiyon(){
-    return "returnlu parametresiz fonksiyon";
-}
-let geleneBilgi=returnluParametresizFonksiyon();
-console.log(geleneBilgi);
-function returnluParametreliFonksiyon (id,name){
-return ("id:"+(id*100)+" "+String(name).substring(0,2).concat("***")+"Gezer".substring(0,2).concat("***"));
-}
-console.log(returnluParametreliFonksiyon(25,"Celal"));
- // ANONYMOUS FUNCTION
- let anonymousFunction= function() {
-    console.log("anonymous functions");
- } 
- anonymousFunction();
- // Arrow Function
- let arrowFunction=(name)=>{
-    console.log("arrow function"+String(name).substring(0,2));
- }
- arrowFunction("Celal");
- // Arrow Function With Return
- let arrowFunctionWithReturn=(name)=>{
-    return "arrow function with return "+String(name).substring(0,2).concat("***");
- }
- //ternary(if kısayol)
- let arrowRetur=arrowFunctionWithReturn("CelalGezer");
- console.log(arrowRetur);
- let yas=16;
- let result=(yas>=18)?"Karar alabilir":"Karar alamaz";
- console.log(result);
-//  if,else
-if(yas==14){
-    console.log("yas 14");
-}else if(yas==15){
-    console.log("yas 15");
-}
-else if(yas===16){// === hem değer hem tip karşılaştırması yapar.
-console.log("yas 16");
-}
-else if(yas===18){
-    console.log("yas 18");
-}
+// function returnsuzParametresizFonksiyon(){
+// console.log("returnsuz parametresiz fonksiyon");
+// }
+// returnsuzParametresizFonksiyon();
+// function returnsuzParametreliFonksiyon(id){
+// console.log("id:"+id);
+// }
+// returnsuzParametreliFonksiyon(25);
+// function returnluParametresizFonksiyon(){
+//     return "returnlu parametresiz fonksiyon";
+// }
+// let geleneBilgi=returnluParametresizFonksiyon();
+// console.log(geleneBilgi);
+// function returnluParametreliFonksiyon (id,name){
+// return ("id:"+(id*100)+" "+String(name).substring(0,2).concat("***")+"Gezer".substring(0,2).concat("***"));
+// }
+// console.log(returnluParametreliFonksiyon(25,"Celal"));
+//  // ANONYMOUS FUNCTION
+//  let anonymousFunction= function() {
+//     console.log("anonymous functions");
+//  } 
+//  anonymousFunction();
+//  // Arrow Function
+//  let arrowFunction=(name)=>{
+//     console.log("arrow function"+String(name).substring(0,2));
+//  }
+//  arrowFunction("Celal");
+//  // Arrow Function With Return
+//  let arrowFunctionWithReturn=(name)=>{
+//     return "arrow function with return "+String(name).substring(0,2).concat("***");
+//  }
+//  //ternary(if kısayol)
+//  let arrowRetur=arrowFunctionWithReturn("CelalGezer");
+//  console.log(arrowRetur);
+//  let yas=16;
+//  let result=(yas>=18)?"Karar alabilir":"Karar alamaz";
+//  console.log(result);
+// //  if,else
+// if(yas==14){
+//     console.log("yas 14");
+// }else if(yas==15){
+//     console.log("yas 15");
+// }
+// else if(yas===16){// === hem değer hem tip karşılaştırması yapar.
+// console.log("yas 16");
+// }
+// else if(yas===18){
+//     console.log("yas 18");
+// }
 //switch case yapısı
 
-switch (yas) {
-    case 15:
-        console.log("yaş 15");
-        break;
-    case 16:
-            console.log("yaş 16");
-            break;
-    case 17:
-        console.log("yaş 17");
-        break;
+// let debugTest=17;
+// switch (debugTest) {
+//     case 15:
+//         console.log("yaş 15");
+//         break;
+//     case 16:
+//             console.log("yaş 16");
+//             break;
+//     case 17:
+//         console.log("yaş 17");
+//         break;
 
-    case 18:
-            console.log("yaş 18");
-            break;
-    default:
-        console.log("yaş dışında");
-        break;
+//     case 18:
+//             console.log("yaş 18");
+//             break;
+//     default:
+//         console.log("yaş dışında");
+//         break;
+// }
+// let girilenSayi=Number(prompt("bir sayı giriniz"));
+// let gs=girilenSayi;
+// let sonuc=(girilenSayi>0)?"sayı pozitiftir":"sayı sıfır veya negatiftir.";
+// console.log(sonuc);
+
+// let saatHesapla=() =>{
+//     let saat=Date(new Date);
+//     return saat;
+// }
+// let saat=saatHesapla();
+// console.log(saat);
+///////////////////////////////////////////////////////////////////7
+// loop, for, while,do-while
+let deger=0;
+for(i=0;i<100;i++){
+    deger+=1;
+    console.log(deger);
 }
+let sum=0;
+let t=0;
+
+while(t<=10){
+    sum+=t;
+    t++;
+    if(t>10){break;} 
+    
+}
+console.log("sum:"+sum);
+let sum1=0,t1=1;
+do{
+sum1+=t1;
+t1++;
+}while(t1<=10);
+console.log("sum1:"+sum1);
