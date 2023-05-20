@@ -195,24 +195,61 @@
 // console.log(saat);
 ///////////////////////////////////////////////////////////////////7
 // loop, for, while,do-while
-let deger=0;
-for(i=0;i<100;i++){
-    deger+=1;
-    console.log(deger);
-}
-let sum=0;
-let t=0;
+// let deger=0;
+// for(i=0;i<100;i++){
+//     deger+=1;
+//     console.log(deger);
+// }
+// let sum=0;
+// let t=0;
 
-while(t<=10){
-    sum+=t;
-    t++;
-    if(t>10){break;} 
+// while(t<=10){
+//     sum+=t;
+//     t++;
+//     if(t>10){break;} 
     
-}
-console.log("sum:"+sum);
-let sum1=0,t1=1;
-do{
-sum1+=t1;
-t1++;
-}while(t1<=10);
-console.log("sum1:"+sum1);
+// }
+// console.log("sum:"+sum);
+// let sum1=0,t1=1;
+// do{
+// sum1+=t1;
+// t1++;
+// }while(t1<=10);
+// console.log("sum1:"+sum1);
+// let sayi=Number(Math.abs(prompt("Lütfen bir sayı giriniz...")));
+// let absultNum=sayi;
+// let sum2=0;
+// let evenNumber=0, oddNumber=0,counter=0;
+
+// switch (absultNum) {
+//     case 0:
+//         counter+=1;
+//         console.log(counter);
+//         evenNumber=1;    
+//         break;
+//         case absultNum<0:            
+//             console.log("sayı negatif olamaz");            
+//             break;
+//     case 44:
+//     console.log("Secret key girildi");
+//         break;
+
+//     default:        
+//             for(i=1;i<=absultNum;i++){
+//                 sum2+=i;
+//                 if(i%2==0){evenNumber+=1;}
+//                 else{oddNumber+=1}
+//             }
+            
+// console.log("toplam: "+sum2);
+// console.log("çift sayısı: "+evenNumber);
+// console.log("tek sayısı: "+oddNumber);      
+// }
+// soru:kulanıcıdan alınan arada boşluk olan isim ve soy isminin ilk harflerinin küçük harf girilmişse büyük harfe dönüştürülmesi js kodunu yazınız.
+let isimSoyisim=String(prompt("Lütfen isim ve soy isminizi giriniz"));
+let ilkHarf=isimSoyisim.charAt(0);
+let bosluk=isimSoyisim.indexOf(" ");
+console.log(isimSoyisim.charAt(0)+"***"+" "+isimSoyisim.charAt(isimSoyisim.indexOf(" ")+1)+"***");
+console.log(String(isimSoyisim.charAt(0)).toLocaleUpperCase()+isimSoyisim.substring(1,bosluk)+isimSoyisim.charAt(bosluk+1).toUpperCase()+String(isimSoyisim).substring((bosluk+2),(String(isimSoyisim).length)));
+
+
