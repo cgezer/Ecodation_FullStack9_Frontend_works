@@ -55,31 +55,60 @@
 // console.log(Math.pow(3,Math.sqrt(Math.abs(-25))));
 // console.log(Maht.floor(Math.random()*9+1));//1<=x<=9
 ///////////////////////////////////////////////////////////sonraki ders/////////
-let number1=35;
-console.log(number1);
-number1=35.7;
-console.log(number1);
-console.log(typeof number1);//typeof
-console.log(12/"1");
-console.log(12/Number("a"));
-console.log(12/Number("1"));//cast
-//console.log(Math.sqrt(Math.abs(Number(prompt("lütfen bir sayı yazınız"))))); //Monad: Bir işlemin çıktısı baska bir işelmin girdisi olarak işlem görünüyorsa bu işlem monad işlemidir.
-console.log(isNaN(12)); //isNaN: is Not a Number
-console.log(isNaN("acd"));
-let bilimselgosterim=150000000;
-console.log(bilimselgosterim);
-bilimselgosterim=15E+7;
-console.log(bilimselgosterim);
-// Sayı Sistemleri (taban çevirme)
-//Binary 2 li sayı sistemi yazımı ve 10 luk tabana çevirimi
-let binary2=0b10111;
-console.log(binary2);
-//octal: 8 li sayı sistemi yazımı  ve 10 luk tabana çevirimi
-let binary8=0o72;
-console.log(binary8);
-//Decimal 10 luk sayı sistemi yazımı ve 10 luk tabana çevirimi
-let binary10=8549;
-console.log(binary10);
-//Hexdecimal 10 luk sayı sistemi yazımı ve 10 luk tabana çevirimi
-let binary16=0x8549;
-console.log(binary16);
+// NUMBER
+// let number1=35;
+// console.log(number1);
+// number1=35.7;
+// console.log(number1);
+// console.log(typeof number1);//typeof
+// console.log(12/"1");
+// console.log(12/Number("a"));
+// console.log(12/Number("1"));//cast
+// //console.log(Math.sqrt(Math.abs(Number(prompt("lütfen bir sayı yazınız"))))); //Monad: Bir işlemin çıktısı baska bir işelmin girdisi olarak işlem görünüyorsa bu işlem monad işlemidir.
+// console.log(isNaN(12)); //isNaN: is Not a Number
+// console.log(isNaN("acd"));
+// let bilimselgosterim=150000000;
+// console.log(bilimselgosterim);
+// bilimselgosterim=15E+7;
+// console.log(bilimselgosterim);
+// // Sayı Sistemleri (taban çevirme)
+// //Binary 2 li sayı sistemi yazımı ve 10 luk tabana çevirimi
+// let binary2=0b10111;
+// console.log(binary2);
+// //octal: 8 li sayı sistemi yazımı  ve 10 luk tabana çevirimi
+// let binary8=0o72;
+// console.log(binary8);
+// //Decimal 10 luk sayı sistemi yazımı ve 10 luk tabana çevirimi
+// let binary10=8549;
+// console.log(binary10);
+// //Hexdecimal 10 luk sayı sistemi yazımı ve 10 luk tabana çevirimi
+// let binary16=0x8f9a;
+// console.log(binary16);
+ /////////////////////////////////////////////////////////////
+ //string
+ let vocabulary="lesson about works of JS ";
+ console.log(vocabulary);
+ console.log(typeof vocabulary);
+ console.log(typeof String(25)); //cast process
+ console.log(vocabulary.length);
+ // trim using: "trim" use to cuts spaces of start or end of text
+ console.log(vocabulary.trim());
+ console.log(vocabulary.trim().length);
+ console.log(vocabulary.toLocaleUpperCase());
+ console.log(vocabulary.toLocaleLowerCase());
+ console.log(vocabulary.charAt(4));
+ console.log(vocabulary.indexOf("of"));
+ console.log(vocabulary.lastIndexOf("of"));
+ console.log(vocabulary.substring(4));
+ console.log(vocabulary.substring(4).toLocaleUpperCase());
+ console.log(vocabulary.substring(4,9));
+ console.log(vocabulary.concat(" sona eklenen"));// concat, given text end of text
+ console.log(vocabulary.startsWith("JS"));
+ console.log(vocabulary.endsWith("JS "));
+ let alinanCumle=String(prompt("bir cümle giriniz"));
+ console.log("cumle:"+alinanCumle);
+ let ilkbosluk=Number(alinanCumle.indexOf(" "));
+ console.log("ilk boşluk:"+ilkbosluk);
+console.log(alinanCumle.replace(alinanCumle.substring(0,alinanCumle.indexOf(" ")),"Javascript"));
+
+
