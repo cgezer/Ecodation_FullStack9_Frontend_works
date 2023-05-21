@@ -245,11 +245,32 @@
 // console.log("çift sayısı: "+evenNumber);
 // console.log("tek sayısı: "+oddNumber);      
 // }
+//////////////////////////////////////////////////////////
 // soru:kulanıcıdan alınan arada boşluk olan isim ve soy isminin ilk harflerinin küçük harf girilmişse büyük harfe dönüştürülmesi js kodunu yazınız.
-let isimSoyisim=String(prompt("Lütfen isim ve soy isminizi giriniz"));
-let ilkHarf=isimSoyisim.charAt(0);
-let bosluk=isimSoyisim.indexOf(" ");
-console.log(isimSoyisim.charAt(0)+"***"+" "+isimSoyisim.charAt(isimSoyisim.indexOf(" ")+1)+"***");
-console.log(String(isimSoyisim.charAt(0)).toLocaleUpperCase()+isimSoyisim.substring(1,bosluk)+isimSoyisim.charAt(bosluk+1).toUpperCase()+String(isimSoyisim).substring((bosluk+2),(String(isimSoyisim).length)));
+// let isimSoyisim=String(prompt("Lütfen isim ve soy isminizi giriniz"));
+// let ilkHarf=isimSoyisim.charAt(0);
+// let bosluk=isimSoyisim.indexOf(" ");
+// console.log(isimSoyisim.charAt(0)+"***"+" "+isimSoyisim.charAt(isimSoyisim.indexOf(" ")+1)+"***");
+// console.log(String(isimSoyisim.charAt(0)).toLocaleUpperCase()+isimSoyisim.substring(1,bosluk)+isimSoyisim.charAt(bosluk+1).toUpperCase()+String(isimSoyisim).substring((bosluk+2),(String(isimSoyisim).length)));
+//////////////////////////////////////////////////////////////////
+//try chatch,axception handling
 
+let tryChatchTutorials=()=>{
+    // global variable (var)
+    //Local variable (let-const)
+    try{
+        var number1 =Number(prompt("lütfen bir sayı giriniz"));
+        number1=number1**2;//like Math.pow(number,2)
+        window.alert(number1);
+        console.log("hatadan dolayı çalışmaaycak alan"+number1);
+    }catch(error){
+        console.error("Hata Mesajı-1: "+error.name);//type error veriyor.
+        console.error("Hata Mesajı-2: "+error.message);//type error vermiyor hata mesajı veriyor.
+        console.error("Hata Mesajı-3: "+error);//type error veriyor.
+    }finally{
+        console.info("Mecburi çalışacak alan")
+    }
+    console.log("Çalışacak alan");
+}
+tryChatchTutorials();
 
