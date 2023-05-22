@@ -296,7 +296,7 @@
 // }
 // dorduncu(ucuncu);
 
-// let arrayTuyorials=()=>{
+// let arrayTutorials=()=>{
 //     let array=["cg",02,true,3.24];
 //     console.log(typeof array);
 //     console.log(array.length);
@@ -308,11 +308,19 @@
 //     array.pop();
 //     console.log("pop sonrası: "+array);
 //     array.shift();
+//     console.log("sort: küçükten büyüge sıralama
+//     array.sort();
 //     console.log("shift sonrası: "+array);
 //     array.unshift(55);
 //     console.log("unshift sonrası: "+array);
+//     array.reverse();
+//     console.log("reverse sonrası tersine sıraya dizer: "+array);
+//     array.sort().reverse();
+//     console.log("array.sort().reverse(); büyükten küçüğe sıralar: "+array);
+//     array.unshift(55);
+//     console.log("unshift sonrası: "+array);
 // }
-//arrayTuyorials();
+//arrayTutorials();
 //////////////////////////////////////////////////////
 let arrayDataSet=()=>{
     let numberData=[];
@@ -322,7 +330,7 @@ let arrayDataSet=()=>{
     return numberData;
 }
 console.log("1-\n***********************");
-let arrayTuyorials2 =function(){
+let arrayTutorials2 =function(){
     //console.log(arrayDataSet());
     let array=arrayDataSet();
     for(let i=0;i<array.length;i++){
@@ -342,7 +350,7 @@ console.log(array[i]);
 }
 // Escape Character(\)
 console.log("\n4-***********************");
-arrayTuyorials2();
+arrayTutorials2();
 // ForEach with Anonymous Function
 //forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
 let array=arrayDataSet();
@@ -357,3 +365,20 @@ array.forEach((value,index,array)=>{
 console.log(`${index}=>${value}`)
 console.log(array);
 });
+//////////////////////////////////////////
+let arrayTutorials3= function(){
+        let array=arrayDataSet();
+        array.sort();
+        // toString 
+        let result1=array.toString().substring(1,5);
+        console.log(result1);
+        // join
+        //join(separator?: string): string; istenilen apıyı string'e çevirir ve araya isteğimiz sayı veya karakteri ekler
+        let result2=array.join("--");
+        console.log(`join=> ${result2}`);
+        
+        //slice
+        //slice(start?: number, end?: number): T[]; belirtilen aralıktaki elemanları döndürür
+        let result3=array.slice(0,3);
+        console.log(`slice 0,3: => ${result3}`);}
+arrayTutorials3();
