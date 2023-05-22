@@ -274,25 +274,71 @@
 // }
 // tryChatchTutorials();
 //MONAD FUNCTİON
-let birinci=(number)=>{
-    number=number**2;// like Math.pow(number,2)
-    return number;
-}
-let ikinci=()=>{
-    let number = Number(promt("lütfen bir sayı giriniz"));
-    let result=birinci(number);
-}
-//ikinci();
+// let birinci=(number)=>{
+//     number=number**2;// like Math.pow(number,2)
+//     return number;
+// }
+// let ikinci=()=>{
+//     let number = Number(promt("lütfen bir sayı giriniz"));
+//     let result=birinci(number);
+// }
+// //ikinci();
 
-//CALLBACK FUNCTION(HELL)
-let ucuncu=(number)=>{
-    number=number**2;// like Math.pow(number,2)
-    return number;
+// //CALLBACK FUNCTION(HELL)
+// let ucuncu=(number)=>{
+//     number=number**2;// like Math.pow(number,2)
+//     return number;
+// }
+// let dorduncu=(callBackFunction)=>{
+//     let number1 = Number(prompt("lütfen bir sayı giriniz"));
+//     let result=callBackFunction(number1);
+//     console.log(result);
+// }
+// dorduncu(ucuncu);
+
+// let arrayTuyorials=()=>{
+//     let array=["cg",02,true,3.24];
+//     console.log(typeof array);
+//     console.log(array.length);
+//     console.log(array[2]);
+//     console.log(array[array.length-1]);
+//     console.log(array);
+//     array.push(16);
+//     console.log("16 push sonrası: "+array);
+//     array.pop();
+//     console.log("pop sonrası: "+array);
+//     array.shift();
+//     console.log("shift sonrası: "+array);
+//     array.unshift(55);
+//     console.log("unshift sonrası: "+array);
+// }
+//arrayTuyorials();
+//////////////////////////////////////////////////////
+let arrayDataSet=()=>{
+    let numberData=[];
+    for(let i=1;i<=5;i++){
+        numberData[i]=Math.floor(Math.random()*9+1);
+    }
+    return numberData;
 }
-let dorduncu=(callBackFunction)=>{
-    let number1 = Number(prompt("lütfen bir sayı giriniz"));
-    let result=callBackFunction(number1);
-    console.log(result);
+let arrayTuyorials2 =function(){
+    //console.log(arrayDataSet());
+    let array=arrayDataSet();
+    for(let i=0;i<array.length;i++){
+console.log(array[i]);
+    }
+    console.log("\n**********************");
+    for(let temp in array){//dizi elemanın indis bilgisini verir
+        console.log(temp+"=>"+array[temp]);
+        console.log(`${temp}=>${array[temp]}`);// bir üst satırla aymı şeyi yapar yeni bir özellik
+    }
+    console.log("\n***********************");
+    for(let temp of array){//dizi elemanın kendisini verir
+        console.log(temp);
+
+       
+    }
 }
-dorduncu(ucuncu);
+arrayTuyorials2();
+
 
