@@ -321,24 +321,32 @@ let arrayDataSet=()=>{
     }
     return numberData;
 }
+console.log("1-\n***********************");
 let arrayTuyorials2 =function(){
     //console.log(arrayDataSet());
     let array=arrayDataSet();
     for(let i=0;i<array.length;i++){
 console.log(array[i]);
     }
-    console.log("\n**********************");
+    console.log("2-\n**********************");
     for(let temp in array){//dizi elemanın indis bilgisini verir
         console.log(temp+"=>"+array[temp]);
         console.log(`${temp}=>${array[temp]}`);// bir üst satırla aymı şeyi yapar yeni bir özellik
     }
-    console.log("\n***********************");
+    console.log("3-\n***********************");
     for(let temp of array){//dizi elemanın kendisini verir
         console.log(temp);
 
        
     }
 }
+// Escape Character(\)
+console.log("\n4-***********************");
 arrayTuyorials2();
-
-
+// ForEach
+//forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+let array=arrayDataSet();
+array.forEach(function(value,index,array){
+console.log(`${index}=>${value}`)
+console.log(array);
+});
