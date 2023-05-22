@@ -343,10 +343,17 @@ console.log(array[i]);
 // Escape Character(\)
 console.log("\n4-***********************");
 arrayTuyorials2();
-// ForEach
+// ForEach with Anonymous Function
 //forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
 let array=arrayDataSet();
 array.forEach(function(value,index,array){
+console.log(`${index}=>${value}`)
+console.log(array);
+});
+console.log("*****************************");
+// ForEach Arrow Function
+//forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+array.forEach((value,index,array)=>{
 console.log(`${index}=>${value}`)
 console.log(array);
 });
