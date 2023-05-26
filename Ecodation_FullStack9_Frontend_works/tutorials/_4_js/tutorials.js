@@ -435,15 +435,15 @@
    let text=String(prompt("Lütfen metin giriniz..."))   
    var result="";
    var space=0,counter=0;
-   var TextArray=[];
+   var textArray=[];
     for(let i=0;i<=text.length;i++){
         if(text.charAt(i)==" "){
-            result=result.concat(TextArray[counter++]=text.slice(space,i));
+            result=result.concat(text.slice(space,i));
             space=i+1;
         }  
     }
-    result=result.concat(TextArray[counter]=text.slice(space,text.length));
-    console.log(TextArray);   
+    result=result.concat(text.slice(space,text.length));
+    console.log(textArray);   
     console.log(`Result: ${result}`);  
 }
 spaceDelete();
