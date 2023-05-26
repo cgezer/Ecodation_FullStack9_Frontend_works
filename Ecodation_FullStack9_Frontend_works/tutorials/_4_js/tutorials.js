@@ -322,63 +322,132 @@
 // }
 //arrayTutorials();
 //////////////////////////////////////////////////////
-let arrayDataSet=()=>{
-    let numberData=[];
-    for(let i=1;i<=5;i++){
-        numberData[i]=Math.floor(Math.random()*9+1);
-    }
-    return numberData;
-}
-console.log("1-\n***********************");
-let arrayTutorials2 =function(){
-    //console.log(arrayDataSet());
-    let array=arrayDataSet();
-    for(let i=0;i<array.length;i++){
-console.log(array[i]);
-    }
-    console.log("2-\n**********************");
-    for(let temp in array){//dizi elemanın indis bilgisini verir
-        console.log(temp+"=>"+array[temp]);
-        console.log(`${temp}=>${array[temp]}`);// bir üst satırla aymı şeyi yapar yeni bir özellik
-    }
-    console.log("3-\n***********************");
-    for(let temp of array){//dizi elemanın kendisini verir
-        console.log(temp);
+// let arrayDataSet=()=>{
+//     let numberData=[];
+//     for(let i=1;i<=5;i++){
+//         numberData[i]=Math.floor(Math.random()*9+1);
+//     }
+//     return numberData;
+// }
+// console.log("1-\n***********************");
+// let arrayTutorials2 =function(){
+//     //console.log(arrayDataSet());
+//     let array=arrayDataSet();
+//     for(let i=0;i<array.length;i++){
+// console.log(array[i]);
+//     }
+//     console.log("2-\n**********************");
+//     for(let temp in array){//dizi elemanın indis bilgisini verir
+//         console.log(temp+"=>"+array[temp]);
+//         console.log(`${temp}=>${array[temp]}`);// bir üst satırla aymı şeyi yapar yeni bir özellik
+//     }
+//     console.log("3-\n***********************");
+//     for(let temp of array){//dizi elemanın kendisini verir
+//         console.log(temp);
 
        
-    }
-}
-// Escape Character(\)
-console.log("\n4-***********************");
-arrayTutorials2();
-// ForEach with Anonymous Function
-//forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
-let array=arrayDataSet();
-array.forEach(function(value,index,array){
-console.log(`${index}=>${value}`)
-console.log(array);
-});
-console.log("*****************************");
-// ForEach Arrow Function
-//forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
-array.forEach((value,index,array)=>{
-console.log(`${index}=>${value}`)
-console.log(array);
-});
-//////////////////////////////////////////
-let arrayTutorials3= function(){
-        let array=arrayDataSet();
-        array.sort();
-        // toString 
-        let result1=array.toString().substring(1,5);
-        console.log(result1);
-        // join
-        //join(separator?: string): string; istenilen apıyı string'e çevirir ve araya isteğimiz sayı veya karakteri ekler
-        let result2=array.join("--");
-        console.log(`join=> ${result2}`);
+//     }
+// }
+// // Escape Character(\)
+// console.log("\n4-***********************");
+// //arrayTutorials2();
+// // ForEach with Anonymous Function
+// //forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+// let array=arrayDataSet();
+// array.forEach(function(value,index,array){
+// console.log(`${index}=>${value}`)
+// console.log(array);
+// });
+// console.log("*****************************");
+// // ForEach Arrow Function
+// //forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+// array.forEach((value,index,array)=>{
+// console.log(`${index}=>${value}`)
+// console.log(array);
+// });
+// //////////////////////////////////////////
+// let arrayTutorials3= function(){
+//         let array=arrayDataSet();
+//         array.sort();
+//         //split
+//         let textExample="Bu-gün günlerden pazartesi";
+//         let result0=array.toString().split(" ");
+//         console.log(`split: ${result0}`);
+//         let resultSplit=textExample.split("--");
+//         console.log(`resultSplit: ${resultSplit}`);
+
+//         // toString 
+//         let result1=array.toString().substring(1,5);
+//         console.log(result1);
+//         // join
+//         //join(separator?: string): string; istenilen apıyı string'e çevirir ve araya isteğimiz sayı veya karakteri ekler
+//         let result2=array.join("--");
+//         console.log(`join=> ${result2}`);
         
-        //slice
-        //slice(start?: number, end?: number): T[]; belirtilen aralıktaki elemanları döndürür
-        let result3=array.slice(0,3);
-        console.log(`slice 0,3: => ${result3}`);}
-arrayTutorials3();
+//         //slice
+//         //slice(start?: number, end?: number): T[]; belirtilen aralıktaki elemanları döndürür
+//         let result3=array.slice(0,3);
+//         console.log(`slice 0,3: => ${result3}`);
+//         console.log(`splice öncesi 0,3: => ${result3}`);
+//         let result4=array.splice();
+//         console.log(`splice 0,3: => ${result4}`);}
+//         //arrayTutorials3();
+// ///////////////////////////////////////////////////////
+// console.log("************************");
+// //forEach(döngü)
+// //forEach(callbackfn:(value: T,index:number,array:T[]))
+//         let arrayTutorials5=function(){
+//             let array=arrayDataSet();
+
+//             array.forEach((value,index,array)=>{
+//                 console.log(`${index}=>${value}`);
+//             });
+// //filter
+// //filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[];
+// console.log("*******Filter******");
+// let data = array.filter((value,index,array)=>{
+//     //console.log(`${index}=>${value}`);
+//     return value%2==0;
+// }).forEach((value,index,array)=>{
+//     console.log(`${index}=>${value}`);
+// });
+
+// //map
+// //map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+// console.log("*******MAP*******");
+// let mapData=array.map((value,index,array)=>{
+//     return Math.pow(value,2);
+// }).forEach((value,index,array)=>{
+//     console.log(`${index}=>${value}`);
+// });
+// //fill
+// //fill(value: T, start?: number, end?: number): this;
+// console.log("*******fill*******");
+// let fillData=array.fill(3,1,3);
+// console.log(fillData);
+// }
+// arrayTutorials5();
+
+
+
+//ÖDEV: verilen metnin boşluklardan arındırılması
+   let spaceDelete=()=>{
+   let text=String(prompt("Lütfen metin giriniz..."))   
+   var result="";
+   var space=0,counter=0;
+   var TextArray=[];
+    for(let i=0;i<=text.length;i++){
+        if(text.charAt(i)==" "){
+            result=result.concat(TextArray[counter++]=text.slice(space,i));
+            space=i+1;
+        }  
+    }
+    result=result.concat(TextArray[counter]=text.slice(space,text.length));
+    console.log(TextArray);   
+    console.log(`Result: ${result}`);  
+}
+spaceDelete();
+
+
+
+      
