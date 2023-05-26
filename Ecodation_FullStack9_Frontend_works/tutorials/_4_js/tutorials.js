@@ -430,22 +430,44 @@
 
 
 
-//ÖDEV: verilen metnin boşluklardan arındırılması
-   let spaceDelete=()=>{
-   let text=String(prompt("Lütfen metin giriniz..."))   
-   var result="";
-   var space=0,counter=0;
-    for(let i=0;i<=text.length;i++){
-        if(text.charAt(i)==" "){
-            result=result.concat(text.slice(space,i));
-            space=i+1;
-        }  
-    }
-    result=result.concat(text.slice(space,text.length)); 
-    console.log(`Result: ${result}`);  
-}
-spaceDelete();
+// //ÖDEV: verilen metnin boşluklardan arındırılması
+//    let spaceDelete=()=>{
+//    let text=String(prompt("Lütfen metin giriniz..."))   
+//    var result="";
+//    var space=0,counter=0;
+//     for(let i=0;i<=text.length;i++){
+//         if(text.charAt(i)==" "){
+//             result=result.concat(text.slice(space,i));
+//             space=i+1;
+//         }  
+//     }
+//     result=result.concat(text.slice(space,text.length)); 
+//     console.log(`Result: ${result}`);  
+// }
+// spaceDelete();
+///////////////////////////////////////////////////////////7
+// let data1=(number)=>{
+// let result=Math.abs(number);
+// alert(result);
+// }
+// let data2=(callbackfnc)=>{
+//     let number=Number(prompt("Lütfen bir sayı giriniz"));
+//     callbackfnc(number);
+// }
+// data2(data1);
 
+///////////////////////////////////////////////////////
+//setInterval
+//setInterval(callbackfnc(),ms)
+let customer1=()=>{
+    setInterval(function(){
+    alert("customer1");
+   },2000);
+}   
+let customer2=()=>{alert("customer2");}
+
+customer1();
+customer2();
 
 
       
