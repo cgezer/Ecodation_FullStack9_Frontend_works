@@ -457,17 +457,101 @@
 // data2(data1);
 
 ///////////////////////////////////////////////////////
-//setInterval
-//setInterval(callbackfnc(),ms)
 let customer1=()=>{
-    setInterval(function(){
-    alert("customer1");
-   },2000);
-}   
-let customer2=()=>{alert("customer2");}
+    setInterval(()=>{
+        alert("customer-1")},3000);
+}
+let customer2=()=>{
+    alert("customer-2")};
 
 customer1();
 customer2();
+//1-callBackFnc
+let data1=(number)=>{
+    let result=Math.abs(number);
+    console.log(result);
+}
+let data2=(callBackFnc)=>{
+    let number =Number(prompt("Lütfen bir sayı giriniz..."));
+    callBackFnc(number);
+}
+//data2(data1);
+
+// 2-Promise
+// //setInterval =>1.YOL
+// //setInterval(callbackfnc(),ms): fonksiyon çalışma zamanı ayarlama
+// let customer1=()=>{
+//     setInterval(function (){
+//     alert("customer1");
+//    },2000);
+// }   
+// let customer2=()=>{alert("customer2");}
+
+// //customer1();
+// //customer2();
+ 
+// //setInterval =>2.YOL
+// //setInterval((){},ms);
+// let customer3=()=>{
+//     setInterval(()=>{
+//     alert("customer3");
+//    },2000);
+// }   
+// let customer4=()=>{alert("customer4");}
+
+// //customer3();
+// //customer4();
+
+// //Promise function
+// //resolve: olumlu sonuçlanmışsa
+// //rejected: olumsuz sonuçlanmışsa
+// //pending: bekleme
 
 
-      
+// let promiseFnc=new Promise((resolve,reject)=>{
+//     resolve(" olumlu sonuçlandı");
+//     reject("olumsuz sonuçlandı");
+// })
+
+// //console.log(promiseFnc);
+// //then:eğer promise'den bir sonuç dönerse çalışır
+// //catch:eğer promise'den bir sonuç dönmezse çalışır.
+// //tehn istenildiği kadar yazılabilir ancak 1 tane chatch yazılabilir.
+// promiseFnc.then().catch();
+
+// promiseFnc.then().then().then().catch();
+
+// promiseFnc.then(()=>{
+
+// }).catch((error)=>{
+//     console.log(error);
+//     console.log(error.name);
+//     console.log(error.message);
+// });
+
+// //promis 1.gösterim biçimi
+// let promiseFnc2=new Promise((resolve,reject)=>{
+//     resolve(" olumlu sonuçlandı");
+//     //reject("olumsuz sonuçlandı");
+// }).then().then().then().then(()=>{}).catch(()=>{});
+
+// //console.log(promiseFnc2);
+// //then:eğer promise'den bir sonuç dönerse çalışır
+// //catch:eğer promise'den bir sonuç dönmezse çalışır.
+// //tehn istenildiği kadar yazılabilir ancak 1 tane chatch yazılabilir.
+// promiseFnc2.then().catch();
+
+// promiseFnc2.then().then().then().catch();
+
+// promiseFnc2.then(()=>{
+
+// }).catch((error)=>{
+//     console.log(error);
+//     console.log(error.name);
+//     console.log(error.message);
+// });
+
+// let promiseFnc3 =new Promise(()=>{
+
+// }).then();
+// console.log(promiseFnc3);
