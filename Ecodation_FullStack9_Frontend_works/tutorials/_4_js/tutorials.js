@@ -545,8 +545,29 @@ let promiseFnc3=new Promise((resolve,reject)=>{
 }).then(()=>{
     console.log("yes");
 }).catch((err)=>{
-console.log(err);
-console.log(err.name);
-console.log(err.message);
+console.error(err);
+console.error(err.name);
+console.error(err.message);
 });
 console.log(promiseFnc3);
+
+//async/await function
+
+let asyncAwaitfnc1=async()=>{
+    try {
+        let status=200;
+        //1.yol
+        // if(status==2000)
+        // return "evet";
+        // else
+        // return "hayır";
+        //2.yol(TERNARY YAPISI İLE GÖSTERİM)
+        //const result1=await(status===200)?"EVET":"HAYIR"; 
+        //3.yol
+        const result2 = status === !200 && "evet";
+        console.log(result2);
+    } catch (error) {
+      console.error(error);
+    }
+}
+asyncAwaitfnc1();
