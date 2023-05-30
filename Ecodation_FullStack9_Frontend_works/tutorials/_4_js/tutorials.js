@@ -457,6 +457,7 @@
 // data2(data1);
 
 ///////////////////////////////////////////////////////
+//setInterval fonlsiyon bekletmede kullanılır
 let customer1=()=>{
     setInterval(()=>{
         alert("customer-1")},3000);
@@ -466,6 +467,7 @@ let customer2=()=>{
 
 customer1();
 customer2();
+
 //1-callBackFnc
 let data1=(number)=>{
     let result=Math.abs(number);
@@ -502,56 +504,24 @@ let data2=(callBackFnc)=>{
 // //customer3();
 // //customer4();
 
-// //Promise function
-// //resolve: olumlu sonuçlanmışsa
-// //rejected: olumsuz sonuçlanmışsa
-// //pending: bekleme
 
+//promise
+//resolve işlem olumlu sonuçlanmışsa
+//reject işlem olumsuz sonuçlanmışsa
+//pending işlem bekleme
+let promiseFnc=new Promise((resolve,reject)=>{
+    resolve(" olumlu sonuçlandı");
+    reject("olumsuz sonuçlandı");
+})
+promiseFnc();
+//then: eğer promisten bir sonuç dönerse çalışır.then birden fazla olabilir 
+//chatch: eğer promisten bir sonuç dönmez ise çalışır(chatch'ten bir tane vardır.)
+promiseFnc.then().catch();
+promiseFnc.then().then().catch();
+promiseFnc.then(()=>{
 
-// let promiseFnc=new Promise((resolve,reject)=>{
-//     resolve(" olumlu sonuçlandı");
-//     reject("olumsuz sonuçlandı");
-// })
-
-// //console.log(promiseFnc);
-// //then:eğer promise'den bir sonuç dönerse çalışır
-// //catch:eğer promise'den bir sonuç dönmezse çalışır.
-// //tehn istenildiği kadar yazılabilir ancak 1 tane chatch yazılabilir.
-// promiseFnc.then().catch();
-
-// promiseFnc.then().then().then().catch();
-
-// promiseFnc.then(()=>{
-
-// }).catch((error)=>{
-//     console.log(error);
-//     console.log(error.name);
-//     console.log(error.message);
-// });
-
-// //promis 1.gösterim biçimi
-// let promiseFnc2=new Promise((resolve,reject)=>{
-//     resolve(" olumlu sonuçlandı");
-//     //reject("olumsuz sonuçlandı");
-// }).then().then().then().then(()=>{}).catch(()=>{});
-
-// //console.log(promiseFnc2);
-// //then:eğer promise'den bir sonuç dönerse çalışır
-// //catch:eğer promise'den bir sonuç dönmezse çalışır.
-// //tehn istenildiği kadar yazılabilir ancak 1 tane chatch yazılabilir.
-// promiseFnc2.then().catch();
-
-// promiseFnc2.then().then().then().catch();
-
-// promiseFnc2.then(()=>{
-
-// }).catch((error)=>{
-//     console.log(error);
-//     console.log(error.name);
-//     console.log(error.message);
-// });
-
-// let promiseFnc3 =new Promise(()=>{
-
-// }).then();
-// console.log(promiseFnc3);
+}).catch((error)=>{
+    console.log(error);
+    console.log(error.name);
+    console.log(error.message);
+});
