@@ -465,8 +465,8 @@ let customer1=()=>{
 let customer2=()=>{
     alert("customer-2")};
 
-customer1();
-customer2();
+//customer1();
+//customer2();
 
 //1-callBackFnc
 let data1=(number)=>{
@@ -504,24 +504,49 @@ let data2=(callBackFnc)=>{
 // //customer3();
 // //customer4();
 
-
+////////////////////////////////////////////////////////////////////////
 //promise
 //resolve işlem olumlu sonuçlanmışsa
 //reject işlem olumsuz sonuçlanmışsa
 //pending işlem bekleme
+//Promise 1st representation
 let promiseFnc=new Promise((resolve,reject)=>{
     resolve(" olumlu sonuçlandı");
-    reject("olumsuz sonuçlandı");
+    //reject("olumsuz sonuçlandı");
 })
-promiseFnc();
-//then: eğer promisten bir sonuç dönerse çalışır.then birden fazla olabilir 
-//chatch: eğer promisten bir sonuç dönmez ise çalışır(chatch'ten bir tane vardır.)
-promiseFnc.then().catch();
-promiseFnc.then().then().catch();
-promiseFnc.then(()=>{
+//promiseFnc();
 
-}).catch((error)=>{
+
+//Promise 2st representation
+let promiseFnc2=new Promise((resolve,reject)=>{
+
+}).then().then().then().catch();
+
+promiseFnc2.then(()=>{
+
+}).then().catch(()=>{
     console.log(error);
     console.log(error.name);
     console.log(error.message);
 });
+
+//then: eğer promisten bir sonuç dönerse çalışır.then birden fazla olabilir 
+//chatch: eğer promisten bir sonuç dönmez ise çalışır(chatch'ten bir tane vardır.)
+
+//eğer promise'de 
+//resolve olursa then()'e düşer
+//reject olursa catch()'e düşer
+let promiseFnc3=new Promise((resolve,reject)=>{
+    let status=200;
+    if(status==2000)
+    return resolve("evet");
+    else
+    return reject("hayır")
+}).then(()=>{
+    console.log("yes");
+}).catch((err)=>{
+console.log(err);
+console.log(err.name);
+console.log(err.message);
+});
+console.log(promiseFnc3);
