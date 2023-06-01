@@ -594,7 +594,7 @@ console.log("********************************");
 for(let temp in personal){
     document.write(`${temp}=>${personal[temp]} <br/>`)
 }
-//obje literal:objede daha sonra eklenecek özellikleri göster
+//object literal:objede daha sonra eklenecek özellikleri göster.
 personal.schoolName="Adıyaman Lisesi"
 console.log(personal.schoolName);
 document.write(personal.schoolName)
