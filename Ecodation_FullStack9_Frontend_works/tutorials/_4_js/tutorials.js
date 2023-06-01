@@ -456,118 +456,153 @@
 // }
 // data2(data1);
 
-///////////////////////////////////////////////////////
-//setInterval fonlsiyon bekletmede kullanılır
-let customer1=()=>{
-    setInterval(()=>{
-        alert("customer-1")},3000);
-}
-let customer2=()=>{
-    alert("customer-2")};
-
-//customer1();
-//customer2();
-
-//1-callBackFnc
-let data1=(number)=>{
-    let result=Math.abs(number);
-    console.log(result);
-}
-let data2=(callBackFnc)=>{
-    let number =Number(prompt("Lütfen bir sayı giriniz..."));
-    callBackFnc(number);
-}
-//data2(data1);
-
-// 2-Promise
-// //setInterval =>1.YOL
-// //setInterval(callbackfnc(),ms): fonksiyon çalışma zamanı ayarlama
+// ///////////////////////////////////////////////////////
+// //setInterval fonlsiyon bekletmede kullanılır
 // let customer1=()=>{
-//     setInterval(function (){
-//     alert("customer1");
-//    },2000);
-// }   
-// let customer2=()=>{alert("customer2");}
+//     setInterval(()=>{
+//         alert("customer-1")},3000);
+// }
+// let customer2=()=>{
+//     alert("customer-2")};
 
 // //customer1();
 // //customer2();
+
+// //1-callBackFnc
+// let data1=(number)=>{
+//     let result=Math.abs(number);
+//     console.log(result);
+// }
+// let data2=(callBackFnc)=>{
+//     let number =Number(prompt("Lütfen bir sayı giriniz..."));
+//     callBackFnc(number);
+// }
+// //data2(data1);
+
+// // 2-Promise
+// // //setInterval =>1.YOL
+// // //setInterval(callbackfnc(),ms): fonksiyon çalışma zamanı ayarlama
+// // let customer1=()=>{
+// //     setInterval(function (){
+// //     alert("customer1");
+// //    },2000);
+// // }   
+// // let customer2=()=>{alert("customer2");}
+
+// // //customer1();
+// // //customer2();
  
-// //setInterval =>2.YOL
-// //setInterval((){},ms);
-// let customer3=()=>{
-//     setInterval(()=>{
-//     alert("customer3");
-//    },2000);
-// }   
-// let customer4=()=>{alert("customer4");}
+// // //setInterval =>2.YOL
+// // //setInterval((){},ms);
+// // let customer3=()=>{
+// //     setInterval(()=>{
+// //     alert("customer3");
+// //    },2000);
+// // }   
+// // let customer4=()=>{alert("customer4");}
 
-// //customer3();
-// //customer4();
+// // //customer3();
+// // //customer4();
 
-////////////////////////////////////////////////////////////////////////
-//promise
-//resolve işlem olumlu sonuçlanmışsa
-//reject işlem olumsuz sonuçlanmışsa
-//pending işlem bekleme
-//Promise 1st representation
-let promiseFnc=new Promise((resolve,reject)=>{
-    resolve(" olumlu sonuçlandı");
-    //reject("olumsuz sonuçlandı");
-})
-//promiseFnc();
+// ////////////////////////////////////////////////////////////////////////
+// //promise
+// //resolve işlem olumlu sonuçlanmışsa
+// //reject işlem olumsuz sonuçlanmışsa
+// //pending işlem bekleme
+// //Promise 1st representation
+// let promiseFnc=new Promise((resolve,reject)=>{
+//     resolve(" olumlu sonuçlandı");
+//     //reject("olumsuz sonuçlandı");
+// })
+// //promiseFnc();
 
 
-//Promise 2st representation
-let promiseFnc2=new Promise((resolve,reject)=>{
+// //Promise 2st representation
+// let promiseFnc2=new Promise((resolve,reject)=>{
 
-}).then().then().then().catch();
+// }).then().then().then().catch();
 
-promiseFnc2.then(()=>{
+// promiseFnc2.then(()=>{
 
-}).then().catch(()=>{
-    console.log(error);
-    console.log(error.name);
-    console.log(error.message);
-});
+// }).then().catch(()=>{
+//     console.log(error);
+//     console.log(error.name);
+//     console.log(error.message);
+// });
 
-//then: eğer promisten bir sonuç dönerse çalışır.then birden fazla olabilir 
-//chatch: eğer promisten bir sonuç dönmez ise çalışır(chatch'ten bir tane vardır.)
+// //then: eğer promisten bir sonuç dönerse çalışır.then birden fazla olabilir 
+// //chatch: eğer promisten bir sonuç dönmez ise çalışır(chatch'ten bir tane vardır.)
 
-//eğer promise'de 
-//resolve olursa then()'e düşer
-//reject olursa catch()'e düşer
-let promiseFnc3=new Promise((resolve,reject)=>{
-    let status=200;
-    if(status==2000)
-    return resolve("evet");
-    else
-    return reject("hayır")
-}).then(()=>{
-    console.log("yes");
-}).catch((err)=>{
-console.error(err);
-console.error(err.name);
-console.error(err.message);
-});
-console.log(promiseFnc3);
+// //eğer promise'de 
+// //resolve olursa then()'e düşer
+// //reject olursa catch()'e düşer
+// let promiseFnc3=new Promise((resolve,reject)=>{
+//     let status=200;
+//     if(status==2000)
+//     return resolve("evet");
+//     else
+//     return reject("hayır")
+// }).then(()=>{
+//     console.log("yes");
+// }).catch((err)=>{
+// console.error(err);
+// console.error(err.name);
+// console.error(err.message);
+// });
+// console.log(promiseFnc3);
 
-//async/await function
+// //async/await function
 
-let asyncAwaitfnc1=async()=>{
-    try {
-        let status=200;
-        //1.yol
-        // if(status==2000)
-        // return "evet";
-        // else
-        // return "hayır";
-        //2.yol(TERNARY YAPISI İLE GÖSTERİM)
-        //const result1=await(status===200)?"EVET":"HAYIR"; 
-        //3.yol
-        const result2 = status === !200 && "evet";
-        console.log(result2);
-    } catch (error) {
-      console.error(error);
+// let asyncAwaitfnc1=async()=>{
+//     try {
+//         let status=200;
+//         //1.yol
+//         // if(status==2000)
+//         // return "evet";
+//         // else
+//         // return "hayır";
+//         //2.yol(TERNARY YAPISI İLE GÖSTERİM)
+//         //const result1=await(status===200)?"EVET":"HAYIR"; 
+//         //3.yol
+//         const result2 = status === !200 && "evet";
+//         console.log(result2);
+//     } catch (error) {
+//       console.error(error);
+//     }
+// }
+// asyncAwaitfnc1();
+
+let personal= {
+    "name":"Mehmet",
+    "surname":"Sarılar",
+    "isLogin":true,
+    "number":123456879,
+    "data":function(number){
+        console.log(`data: ${Math.sqrt(number)}`);
+    },
+    "java":{
+        "techName":"JavaSe",
+        "year":"25"
     }
+};
+console.log(personal);
+console.log(personal.name.toUpperCase());
+console.log(personal.isLogin&&"sign");
+console.log(personal.java.techName);
+console.log(personal.data(16));
+console.log("********************************");
+for(let temp in personal){
+    document.write(`${temp}=>${personal[temp]} <br/>`)
 }
-asyncAwaitfnc1();
+//obje literal:objede daha sonra eklenecek özellikleri göster
+personal.schoolName="Adıyaman Lisesi"
+console.log(personal.schoolName);
+document.write(personal.schoolName)
+//object nested naming
+console.log(personal);
+console.log(personal.name);
+console.log(personal["name"]);
+console.log(personal.java.techName);
+console.log(personal.["java"["techName"]]);
+console.log("*******************************");
+//object constructor
