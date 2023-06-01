@@ -603,6 +603,13 @@ console.log(personal);
 console.log(personal.name);
 console.log(personal["name"]);
 console.log(personal.java.techName);
-console.log(personal.["java"["techName"]]);
+console.log(personal["java"]["techName"]);
 console.log("*******************************");
 //object constructor
+let personal2=function(name,surname){
+    this.name=name
+    this.surname=surname
+    console.log(this);
+}
+
+let result=new personal2("Diyarbakır","Büyükşehir")
