@@ -613,3 +613,16 @@ let personal2=function(name,surname){
 }
 
 let result=new personal2("Diyarbakır","Büyükşehir")
+//prototype
+let celalGezer=(number)=>{
+    const temp=Number(Math.pow(number,3));
+    alert(temp);
+    return temp;
+};
+console.log(celalGezer(3));
+String.prototype.celalGezer=(number)=>{
+    const temp=Number(Math.pow(number,3));
+    alert(temp);
+    return temp;
+}
+let anyStudent="".celalGezer(5);
