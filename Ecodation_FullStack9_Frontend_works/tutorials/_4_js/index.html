@@ -33,8 +33,20 @@
   <a class="btn btn-primary" onclick="alert('on click')">alert a ile</a><hr>
       <!--mouse çift tıklanınca çalışır-->
   <a href="http://www.google.com" class="btn btn-primary" onclick="alert('on click')">a ile web sitesine yönlenme</a>
+  <!-- *************window location********* -->
   <!--buton ile sayfaya yönlendirme window.location bileşeni ile yapılır-->
   <button class="btn btn-primary" onclick="window.location='http://www.google.com'">window location</button><hr>
+<!-- *************window confirm ve window location********* -->
+  <button class="btn btn-primary" onclick="confirmLocation()">window confirm location</button>
+  <script>
+    let confirmLocation=()=>{
+      let result=
+                window.confirm("siteye yönlenmek istiyormusunuz")
+                ? window.location='http://www.google.com'
+                :window.alert("isteğiniz üzerine aynı sayfada kalındı");
+                console.log(result);
+    }
+  </script>
       <!--klavyeye basıldığında çalışır-->
   <button class="btn btn-primary" onkeydown="onClickDeneme()">onkeydown</button><hr>
       <!--klavyeye basılıp elini kaldırdığında çalışır-->
@@ -42,9 +54,26 @@
       <!--mouse tekerleğini ileri geri yaptığında çalışır-->
   <button class="btn btn-danger" onmousewheel="onClickDeneme()">onmousewheel</button><hr>
   
-  <p class="display-3">LISTENER</p>
-  <p id="param1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nesciunt, tenetur, magnam reiciendis eius fuga consequuntur saepe non voluptates est, nulla laudantium doloremque odit neque animi. Quaerat perferendis provident voluptates!</p>
-    <hr>
+  <p class="display-3">LISTENER</p> 
+  <p id="param1" style="color: rgb(190, 76, 15);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nesciunt, tenetur, magnam reiciendis eius fuga consequuntur saepe non voluptates est, nulla laoluptates!</p>
+  <p id="param2" style="color: rgb(137, 165, 25);">lor sit amet consectetur adipisicing elit. Beatae nesciunt, tenetur, magnam reiciendis eius fuga consequuntes est, nulla lauds provident voluptates!</p>
+  <p id="param3" style="color: rgb(76, 10, 209);">Lo dolor sit amet consectetur adipisicing elit. Beatae nesciunt, tenetur, magnam reiciendis eius fuga consequuntes est, nulla lauds provident voluptates!</p>
+  <p id="param4" style="color: rgb(6, 47, 31);"> dolor sit amet consectetur adipisicing elit. Beatae nesciunt, tenetur, magnam reiciendis eius fuga consequuntes est, nulla lauds provident voluptates!</p>
+    <hr> 
+    <!-- script ile event ve listener işlemleri aşağıdaki gibidir. aynı işlemler js tarafında da yapıldı. tutorials.js'de -->
+    <script>
+      let onClickDeneme=()=>{
+    console.log("clicked"); 
+ }
+ let counter=1;
+ let mouseSayisiTakip=()=>{    
+    alert(`mouse ${counter++} defa butona uğradı`);
+ }
+    </script>
+    <script>
+  let listenerData=document.getElementById('param1');
+  listenerData.addEventListener("click",function(e){alert("Metin tıklandı"+"=>"+e.preventDefault+"=>"+e.target)});
+    </script>
   <!-- <p id="param_id" onclick="result()">Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Nihil, asperiores! Voluptas molestiae amet dolorem odio nemo natus possimus dolor 
          corrupti vel repellat.</p> -->
