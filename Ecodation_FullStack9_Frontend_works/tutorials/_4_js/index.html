@@ -20,13 +20,32 @@
 </head>
 <body class="container">
   <br><br><br>
-  <button class="btn btn-primary" onclick="onClickDeneme()">onclick</button><!--mouse tek tıklanınca çalışır-->
-  <button class="btn btn-primary" ondblclick="onClickDeneme()">ondblclick</button><!--mouse çift tıklanınca çalışır-->
-  <button class="btn btn-primary" onkeydown="onClickDeneme()">onkeydown</button><!--klavyeye basıldığında çalışır-->
-  <button class="btn btn-primary" onkeyup="onClickDeneme()">onkeyup</button><!--klavyeye basılıp elini kaldırdığında çalışır-->
-  <button class="btn btn-danger" onmousewheel="onClickDeneme()">onmousewheel</button><!--mouse tekerleğini ileri geri yaptığında çalışır-->
-  <button class="btn btn-danger" onmouseleave="mouseSayisiTakip()">onmouseleave</button><!--mouse butonun üzerinden ayrıldığında çalışır-->
-    <!-- <p id="param_id" onclick="result()">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <p class="display-3">EVENT</p>
+      <!--mouse tek tıklanınca çalışır-->
+  <button class="btn btn-primary" onclick="onClickDeneme()">onclick</button>
+      <!--mouse çift tıklanınca çalışır-->
+  <button class="btn btn-primary" ondblclick="onClickDeneme()">ondblclick</button><hr>
+      <!--mouse butonun üzerinden ayrıldığında çalışır fonksiyon ile alert çağırılır-->
+  <button class="btn btn-primary" onmouseleave="mouseSayisiTakip()">onmouseleave fonksiyonla alert</button>
+      <!--mouse tıklanınca alert çıkar -->
+  <button class="btn btn-primary" onclick="alert('on click')">alert</button>
+      <!--mouse tıklanınca alert çıkar. fonsiyona yazmaya gerek kalmadan-->
+  <a class="btn btn-primary" onclick="alert('on click')">alert a ile</a><hr>
+      <!--mouse çift tıklanınca çalışır-->
+  <a href="http://www.google.com" class="btn btn-primary" onclick="alert('on click')">a ile web sitesine yönlenme</a>
+  <!--buton ile sayfaya yönlendirme window.location bileşeni ile yapılır-->
+  <button class="btn btn-primary" onclick="window.location='http://www.google.com'">window location</button><hr>
+      <!--klavyeye basıldığında çalışır-->
+  <button class="btn btn-primary" onkeydown="onClickDeneme()">onkeydown</button><hr>
+      <!--klavyeye basılıp elini kaldırdığında çalışır-->
+  <button class="btn btn-primary" onkeyup="onClickDeneme()">onkeyup</button><hr>
+      <!--mouse tekerleğini ileri geri yaptığında çalışır-->
+  <button class="btn btn-danger" onmousewheel="onClickDeneme()">onmousewheel</button><hr>
+  
+  <p class="display-3">LISTENER</p>
+  <p id="param1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nesciunt, tenetur, magnam reiciendis eius fuga consequuntur saepe non voluptates est, nulla laudantium doloremque odit neque animi. Quaerat perferendis provident voluptates!</p>
+    <hr>
+  <!-- <p id="param_id" onclick="result()">Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Nihil, asperiores! Voluptas molestiae amet dolorem odio nemo natus possimus dolor 
          corrupti vel repellat.</p> -->
 

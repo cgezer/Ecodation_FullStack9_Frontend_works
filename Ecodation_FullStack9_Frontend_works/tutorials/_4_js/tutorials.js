@@ -621,6 +621,7 @@
 // this.renk=renk;
 // }
 // let siparis=new otomobil("Volvo","S90","2023","siyah");
+// EVENT
  let onClickDeneme=()=>{
     console.log("clicked"); 
  }
@@ -628,3 +629,8 @@
  let mouseSayisiTakip=()=>{    
     alert(`mouse ${counter++} defa butona uğradı`);
  }
+ //LISTENER
+
+ let listenerData=document.getElementById('param1').addEventListener("click",function(e){alert("Metin tıklandı"+e)});
+ let listenerData1=document.getElementById('param1').addEventListener("click",function(e){e.preventDefault});
+ //e.preventDefault datası browser'a bir şey yapmamasını belirtir.daha sonra detaylı incelenecek
