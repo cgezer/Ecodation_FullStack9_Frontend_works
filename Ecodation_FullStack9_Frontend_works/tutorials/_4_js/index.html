@@ -15,12 +15,17 @@
         color: blue;
         margin: 0 auto;
         padding: 4rem;
-    }
-  
+    }  
  </style>
 </head>
-
-<body>
+<body class="container">
+  <br><br><br>
+  <button class="btn btn-primary" onclick="onClickDeneme()">onclick</button><!--mouse tek tıklanınca çalışır-->
+  <button class="btn btn-primary" ondblclick="onClickDeneme()">ondblclick</button><!--mouse çift tıklanınca çalışır-->
+  <button class="btn btn-primary" onkeydown="onClickDeneme()">onkeydown</button><!--klavyeye basıldığında çalışır-->
+  <button class="btn btn-primary" onkeyup="onClickDeneme()">onkeyup</button><!--klavyeye basılıp elini kaldırdığında çalışır-->
+  <button class="btn btn-danger" onmousewheel="onClickDeneme()">onmousewheel</button><!--mouse tekerleğini ileri geri yaptığında çalışır-->
+  <button class="btn btn-danger" onmouseleave="mouseSayisiTakip()">onmouseleave</button><!--mouse butonun üzerinden ayrıldığında çalışır-->
     <!-- <p id="param_id" onclick="result()">Lorem ipsum dolor sit amet consectetur adipisicing elit.
          Nihil, asperiores! Voluptas molestiae amet dolorem odio nemo natus possimus dolor 
          corrupti vel repellat.</p> -->
@@ -31,7 +36,6 @@
                 document.getElementById("param_id").innerHTML="tıklayınca metin değiştirildi"
             }
         </script> -->
-
   <header>
     <!-- place navbar here -->
   </header>
@@ -48,9 +52,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-
   <!-- external js -->
   <script src="tutorials.js"></script>
 </body>
-
 </html>

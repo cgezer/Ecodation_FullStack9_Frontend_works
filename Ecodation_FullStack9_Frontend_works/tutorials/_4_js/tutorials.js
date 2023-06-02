@@ -572,57 +572,59 @@
 // }
 // asyncAwaitfnc1();
 
-let personal= {
-    "name":"Mehmet",
-    "surname":"Sarılar",
-    "isLogin":true,
-    "number":123456879,
-    "data":function(number){
-        console.log(`data: ${Math.sqrt(number)}`);
-    },
-    "java":{
-        "techName":"JavaSe",
-        "year":"25"
-    }
-};
-console.log(personal);
-console.log(personal.name.toUpperCase());
-console.log(personal.isLogin&&"sign");
-console.log(personal.java.techName);
-console.log(personal.data(16));
-console.log("********************************");
-for(let temp in personal){
-    document.write(`${temp}=>${personal[temp]} <br/>`)
-}
-//object literal:objede daha sonra eklenecek özellikleri göster.
-personal.schoolName="Adıyaman Lisesi"
-console.log(personal.schoolName);
-document.write(personal.schoolName)
-//object nested naming
-console.log(personal);
-console.log(personal.name);
-console.log(personal["name"]);
-console.log(personal.java.techName);
-console.log(personal["java"]["techName"]);
-console.log("*******************************");
-//object constructor
-let personal2=function(name,surname){
-    this.name=name
-    this.surname=surname
-    console.log(this);
-}
+// let personal= {
+//     "name":"Mehmet",
+//     "surname":"Sarılar",
+//     "isLogin":true,
+//     "number":123456879,
+//     "data":function(number){
+//         console.log(`data: ${Math.sqrt(number)}`);
+//     },
+//     "java":{
+//         "techName":"JavaSe",
+//         "year":"25"
+//     }
+// };
+// console.log(personal);
+// console.log(personal.name.toUpperCase());
+// console.log(personal.isLogin&&"sign");
+// console.log(personal.java.techName);
+// console.log(personal.data(16));
+// console.log("********************************");
+// for(let temp in personal){
+//     document.write(`${temp}=>${personal[temp]} <br/>`)
+// }
+// //object literal:objede daha sonra eklenecek özellikleri göster.
+// personal.schoolName="Adıyaman Lisesi"
+// console.log(personal.schoolName);
+// document.write(personal.schoolName)
+// //object nested naming
+// console.log(personal);
+// console.log(personal.name);
+// console.log(personal["name"]);
+// console.log(personal.java.techName);
+// console.log(personal["java"]["techName"]);
+// console.log("*******************************");
+// //object constructor
+// let personal2=function(name,surname){
+//     this.name=name
+//     this.surname=surname
+//     console.log(this);
+// }
 
-let result=new personal2("Diyarbakır","Büyükşehir")
-//prototype
-let celalGezer=(number)=>{
-    const temp=Number(Math.pow(number,3));
-    alert(temp);
-    return temp;
-};
-console.log(celalGezer(3));
-String.prototype.celalGezer=(number)=>{
-    const temp=Number(Math.pow(number,3));
-    alert(temp);
-    return temp;
-}
-let anyStudent="".celalGezer(5);
+// let result=new personal2("Diyarbakır","Büyükşehir")
+
+// let otomobil=(marka,model,plaka,renk)=>{
+// this.marka=marka;
+// this.model=model;
+// this.plaka=plaka;
+// this.renk=renk;
+// }
+// let siparis=new otomobil("Volvo","S90","2023","siyah");
+ let onClickDeneme=()=>{
+    console.log("clicked"); 
+ }
+ let counter=1;
+ let mouseSayisiTakip=()=>{    
+    alert(`mouse ${counter++} defa butona uğradı`);
+ }
