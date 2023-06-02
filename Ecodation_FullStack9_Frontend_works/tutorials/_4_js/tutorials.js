@@ -622,15 +622,19 @@
 // }
 // let siparis=new otomobil("Volvo","S90","2023","siyah");
 // EVENT
- let onClickDeneme=()=>{
-    console.log("clicked"); 
- }
- let counter=1;
- let mouseSayisiTakip=()=>{    
-    alert(`mouse ${counter++} defa butona uğradı`);
- }
+//  let onClickDeneme=()=>{
+//     console.log("clicked"); 
+//  }
+//  let counter=1;
+//  let mouseSayisiTakip=()=>{    
+//     alert(`mouse ${counter++} defa butona uğradı`);
+//  }
  //LISTENER
 
- let listenerData=document.getElementById('param1').addEventListener("click",function(e){alert("Metin tıklandı"+e)});
- let listenerData1=document.getElementById('param1').addEventListener("click",function(e){e.preventDefault});
+//  let listenerData=document.getElementById('param1');
+//  listenerData.addEventListener("click",function(e){alert("Metin tıklandı"+e)});
+ let listenerData1=document.getElementById('param2');
+ listenerData1.addEventListener("click",function(e){e.preventDefault});
  //e.preventDefault datası browser'a bir şey yapmamasını belirtir.daha sonra detaylı incelenecek
+ let listenerData3=document.getElementById('param3');
+ listenerData3.addEventListener("mouseover",function(e){alert("Metin metin ziyaret edildi"+e)});
