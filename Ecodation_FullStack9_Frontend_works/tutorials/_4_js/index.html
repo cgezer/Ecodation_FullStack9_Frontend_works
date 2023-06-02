@@ -16,9 +16,37 @@
         margin: 0 auto;
         padding: 4rem;
     }  
+    .domCss{
+      color: blueviolet;
+      background-color: aquamarine;
+      font-size: 2rem;
+    }
  </style>
 </head>
 <body class="container">
+
+  <p class="display-3">DOM</p>
+  <p id="dom_id" name="dom_name">Tarih:</p>
+  <button id="sub_id" class="btn btn-primary" onclick="dateShow()">Date Show</button>
+  <script>    
+        let dateShow=()=>{
+          //getElementById kullanımı
+        let valueDate=document.getElementById("dom_id");       
+        //getElementByName
+         //let valueDate1=document.getElementsByName("dom_name")[0];
+        //HTML
+        valueDate.innerHTML="<b>"+new Date()+"</b>";
+        valueDate.innerHTML=(`<b>${new Date()}</b>`);        
+        //TEXT
+        //valueDate.innerText=(`<b>${new Date()}</b>`);//bold yapmaz innerhtml'de <b> formatı çalışır.
+        //CSS
+        // valueDate.style.color="green";
+        // valueDate.style.backgroundColor="orange";
+        // valueDate.style.fontSize="2rem";
+        valueDate.classList.add("domCss");//yukarıdan CSS ile eklediğimiz özellikleri ayrı bir yöntem olarak style tagının içine yazılarak burdan classList.add özelliği ile ekliyoruz.
+
+    }
+  </script>
   <br><br><br>
   <p class="display-3">EVENT</p>
       <!--mouse tek tıklanınca çalışır-->
