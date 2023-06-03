@@ -638,3 +638,5 @@
  //e.preventDefault datası browser'a bir şey yapmamasını belirtir.daha sonra detaylı incelenecek
  let listenerData3=document.getElementById('param3');
  listenerData3.addEventListener("mouseover",function(e){alert("Metin metin ziyaret edildi"+e)});
+
+ 

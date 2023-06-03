@@ -24,7 +24,24 @@
  </style>
 </head>
 <body class="container">
-
+<script>
+  //localStorage browserda verilerin saklanması
+  //set key:value
+  //sessionStorage  logout olunca bilgiler gider
+ const userSetDataName=localStorage.setItem("adi","Celal");
+ const userSetDataSurname=localStorage.setItem("soyadı","Gezer");
+ console.log(localStorage);
+//get =>key
+ let userGetDataName=localStorage.getItem("adi");
+ console.log(userGetDataName=userGetDataName.concat(" Adıyaman"));
+ console.log(userGetDataName);
+ //removeItem sadece ilgili key'in değeri silindi
+const userRemoveDataName=localStorage.removeItem("adi");
+console.log(localStorage);
+//clear tamamiyle silindi
+const userClearData=localStorage.clear();
+console.log(localStorage);
+</script>
   <p class="display-3">DOM</p>
   <p id="dom_id" name="dom_name">Tarih:</p>
   <button id="sub_id" class="btn btn-primary" onclick="dateShow()">Date Show</button>
