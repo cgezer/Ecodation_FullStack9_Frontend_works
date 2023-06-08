@@ -1,0 +1,70 @@
+### versiyon ###
+git --version veya git -v aynı şey
+#############################################################################
+### config ###
+git config --global user.name
+git config --global user.email
+git config --global user.name "cgezer" (eğer adı kısmı boş geliyorsa bu şekilde eklenir)
+git config --global user.email "email" (eğer email kısmı boş geliyorsa bu şekilde eklenir)
+git config --global -l (gitteki projeler repostories görülür)
+#############################################################################
+##DİKKAT: windows kullanılıyorsa notepad++ için PATH eklenmelidir.
+git config --global core.editor  "notepad++"
+
+git log --all --graph --decorate --oneline (br dataya takma ad, mahlas eklenmesini sağlar. daha sonra bu takma ad ile çağırılabilir)
+git config --global alias.takmaAd "log --all --decorate --graph --oneline"
+#############################################################################
+### GIT CREAT ###
+git init
+git add .  (yazılan metin tüm dosyalara eklenir)
+git rm --cached dosyaAdi.txt (yazılan metin dosyaAdi dosyasına eklenir)
+git add dosya* (yazılan metin dosya ile beşlayan tüm dosyalara eklenir)
+git log
+
+git commit -m "commit 1" (commit eklemek için)
+git commit --amend -m "commit #1" (eklenen komitin adını değiştirmek için commit -1 adı commit #1 oldu)
+
+git remote
+git push -u origin master
+#############################################################################
+### GITHUP (Microsoft) ###
+git init
+git add .  (yazılan metin tüm dosyalara eklenir)
+git commit -m "commit 1" (First commit)
+git branch  -M main 
+git remote add origin https://github.com/cgezer/git_tutorials.git
+git push -u origin main
+#############################################################################
+### SÜREKLİ KULLANILACAKLAR ###
+gitti proje oluşturulduktan sonra aşağıdaki üç komut kullanılır commitler için
+git add .
+git commit -m "commit başlığı"
+git push
+#############################################################################
+### GIT CLONE ###
+git clone githubURL(hangi url ise o yazılacak)
+
+### GIT SIKLIKLA KULLANILAN KODLAR ###
+git status
+git help veya git -h (kullanılan komutların neler olduğu konusunda açıklama getir)
+
+### GIT DIFF ###
+git log
+git diff commit1 commit2 (iki komit arasındaki farkı gösterir)
+### GIT IGNORE ###
+
+cat >>.gitignore ile gitignore dosyası oluşturulduğunda git tarafında görülmesini 
+istemediğimiz dosyaları bu dosyanın içeriğine yazmamız gerekir.
+
+### STASH ### (bir iş yaparken yapılan işin kaydedilip tekrar o işe dönmeyi sağlayan komut)
+git status
+git add .
+git stash save "database"
+git list
+git  git stash apply database(geri bu işe dönmek istendiğinde)
+
+### GIT BRANCH ###
+git branch --all(branchleri listeler)
+git branch abc (abcadında bir branch oluşturur)
+git checkout frontend(frontend branch'ne geçer.bunu git klasörümüzdede görebiliriz.)
+git merge frontend (frontend branch'ni master branch ile birleştirir)

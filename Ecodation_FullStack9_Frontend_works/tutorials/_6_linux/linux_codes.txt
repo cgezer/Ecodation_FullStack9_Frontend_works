@@ -1,0 +1,72 @@
+###Sistem Ön Yüklemesi###
+sudo apt-get update -y
+sudo aptget upgrade -y
+### PORT BILGISI OGRENMEK ICIN ###
+sudo ufw status acık port bilgisi öğrenmek için
+sudo ufw enable
+netstat -nlptu
+portlar:
+1-1023
+1024-49151
+49152-65535
+### Http status codes ###
+1XXX ==> Information
+2XXX ==> Success
+3XXX ==> Redirection
+4XXX ==> Client Error
+5XXX ==> Server Error
+###Dosya Yapıları karşılaştırması###
+windows ==> FAT,NTFS
+Linux   ==> Ext2
+
+###ESCAPE(KAÇIŞ)###
+\ =escape karakter için
+New\ folder(boşluğu vermek için \ karakteri kullanılır yazılmazsa new ve folder diye iki ayrı dosya arar,bakar)
+### SIK KULLANILAN KOMUTLAR###
+ctrl+c konsol dizinine geçmeye yarar
+clear
+sudo apt-get install net-tools
+pwd bulunulan dizini gösterir(print working directory)
+
+cd dizin değiştirme(change directory)
+cd. bulunduğu dizin anlamına gelir
+cd .. üst dizine geç anlamına gelir
+cd / kök dizine git anlamına gelir
+cd ~ root dizinine getirir. (~ tinda simgesi)
+history daha önce kullanılmış komutları gösterir
+ls bulunulan dizindeki dosyaların adını gösterir
+ls -a gizli dosyaların da adını gösterir
+ls -al tüm dosyaları detaylarıyla gösterir(asağıdaki 2 örnek listeden alınmıştır)
+d rwx rxr x   3 root root (bastaki d directory olduğunu gösterir
+- rwx rxr x   3 root root ( baştaki -işareti bunun bir dosya olduğunu gösterir)
+r read   =2^2=4 ,r: okuma yetkisi
+w write  =2^1=2 ,w:yazma yetkisi
+x execute=2^0=1 ,x:çalıştırma yetkisi
+toplam 7
+r w x
+4 2 1 =7 şeklinde hesaplanır
+777 ise kullanıcı tam yetkili 
+rx=5
+rwx rx rx =7 5 5
+
+### DİZİN OLUŞTURMAK SİLMEK ###
+mkdir abc: abc adında bir dizin oluşturur.
+rmdir abc: abc adında dizini siler
+rm abc.txt:abc adındaki txt dosyasını siler
+### DOSYA OLUŞTURMAK SİLMEK ###
+touch abc.txt abc adında txt dosyası oluşturur
+rm -r file.txt
+rm -r New\ folder
+cat deneme.txt deneme.txt adındaki dosya içeriğini okur
+cat > deneme.txt+enter yazılacka metin yazılır tekrar enter'e basılır 
+böylelikle dosyadaki bilgileri siler yeni girilen metni dosyaya yazar.
+cat >> deneme.txt+enter ekelencek metin yazılır enter'e basılır bu defa yeni metin dosyaya önceki metni silmeden yazılır
+tac deneme.txt satırları aşağıdan yukarı doğru okur
+tab tuşuna basıldığında girilen karakterlerle başlayan komutları gösterir
+
+### MOVE (hem taşıma hem yer değiştirme işlemleri)###
+mv deneme.txt yeniDeneme.txt (dosya isimini yeniDeneme diye değiştirir)
+mv deneme.txt abc/ (deneme dosyasını abc dosyasına taşır)
+
+### COPY ###
+cp deneme1.txt deneme2.txt (deneme2 dosyasının içeriği deneme2'ye kopyalanır)

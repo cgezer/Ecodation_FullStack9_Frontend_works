@@ -18,7 +18,13 @@ const submitButton=(event)=>{
  let localStorageSetPassword=localStorage.setItem("password",passwordData);
  console.log(localStorage);
  let localStorageGetPassword=localStorage.getItem("password");
- console.log(localStorageGetPassword);
-
-   
+ console.log(localStorageGetPassword);   
+}
+const submitHide=()=>{
+    $("#form_id").hide(2000);
+    $("#form_show_btn").css("backgroundColor","red");
+}
+const submitShow1=()=>{
+    $("#form_id").show("slow");
+    $("#form_show_btn").css("backgroundColor","rgb(29,101,251)");    
 }
